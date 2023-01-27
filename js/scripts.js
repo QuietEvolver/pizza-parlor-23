@@ -9,4 +9,10 @@ function Pizza(size){
   this.size = size;
 } 
 
+// toppings = ["mushrooms", "anchovies", "pineapple"];
+  // size = ["small", "medium", "large"];
 
+
+window.addEventListener("load", function(){
+  document.querySelector("form#pizza-form").addEventListener("submit", handleFormSubmission);
+});
