@@ -9,6 +9,6 @@ Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
 
 Describe: Pizza.prototype.details
 
-Test: "It should return a Pizza order size selection"
-Code: const myPizza = new Pizza(toppings: [], size: "medium" )
-Expected Output: Pizza { toppings: [], size: "medium" }
+Test: "It should return a Pizza order toppings and size form selection(s)."
+Code: const myPizza = new Pizza(toppings: ["pinneapple"], size: "medium" )
+Expected Output: Pizza { toppings: ["pinneapple"], size: "medium" }
