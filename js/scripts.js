@@ -1,5 +1,4 @@
 /*
-Allow the user to choose toppings and size for the pizza they'd like to order.
 Create a pizza object constructor with properties for toppings and size.
 Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
 */
@@ -15,14 +14,18 @@ Pizza.prototype.details = (e) => {
   const log = document.querySelector("#log");
 
   const data = new FormData(form);
-  console.log("e.target.form", e.target.form);
   let output = "";
-  for (const entry of data) {
-    output = `Your order detail: ${output} ${entry[0]} = ${entry[1]}`
+  for (const entry of data) { // 
+    output = `${output} ${entry[0]} = ${entry[1]}\n`
     console.log("Output: ", output);  
+    console.log("Entry: ", entry); 
+     
     e.preventDefault();
   }
   log.innerText = output;
+  // setTimeout(output, 3000);
+  // console.log("output: ", output);
+
 }
 
 const myPizza = new Pizza(); // mock db
