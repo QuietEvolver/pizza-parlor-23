@@ -9,25 +9,45 @@
 <body>
   <h2>Pizza Parlor</h2>
   <form action="" id="pizza-form">
+    <!-- checkbox-topping-select -->
     <fieldset>
       <legend>Select your toppings:</legend>
   
       <div>
-        <input type="radio" id="mushrooms" name="drone" value="mushrooms">
+        <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
         <label for="mushrooms">mushrooms</label>
       </div>
   
       <div>
-        <input type="radio" id="anchovies" name="drone" value="anchovies">
+        <input type="checkbox" id="anchovies" name="toppings" value="anchovies">
         <label for="anchovies">anchovies</label>
       </div>
   
       <div>
-        <input type="radio" id="pineapple" name="drone" value="pineapple">
+        <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
         <label for="pineapple">pineapple</label>
       </div>
     </fieldset>
-    <button type="submit"></button>
+    <!-- radio-size-select -->
+    <fieldset>
+      <legend>Select your size:</legend>
+  
+      <div>
+        <input type="radio" id="small" name="size" value="small">
+        <label for="small">small</label>
+      </div>
+  
+      <div>
+        <input type="radio" id="medium" name="size" value="medium">
+        <label for="medium">medium</label>
+      </div>
+  
+      <div>
+        <input type="radio" id="large" name="size" value="large" checked>
+        <label for="large">large</label>
+      </div>
+    </fieldset>
+    <button type="submit">Submit</button>
   </form>
 </body>
 <div>
