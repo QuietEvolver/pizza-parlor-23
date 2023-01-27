@@ -11,8 +11,20 @@ function Pizza(size){
 
 // toppings = ["mushrooms", "anchovies", "pineapple"];
   // size = ["small", "medium", "large"];
+function handleFormSubmission(e){
 
+  const log = document.querySelector("log");
+  const data = new FormData(form);
+  let output = "";
+  for (const entry of data) {
+    output = `${output}${entry[0]}=${entry[1]}`
+  }
+  log.inneText = output;
+  e.preventDefault();
+}
 
-window.addEventListener("load", function(){
-  document.querySelector("form#pizza-form").addEventListener("submit", handleFormSubmission);
+window.addEventListener("load", function(){ // #pizza-form
+let form =  document.querySelector("form")
+form.addEventListener("submit", handleFormSubmission);
+  
 });
