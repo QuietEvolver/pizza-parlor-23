@@ -9,9 +9,6 @@ function Pizza(size){
   this.size = size;
 } 
 
-// toppings = ["mushrooms", "anchovies", "pineapple"];
-// size = ["small", "medium", "large"];
-
 Pizza.prototype.details = (e) => {
   e.preventDefault();
   const form = document.querySelector("form");
