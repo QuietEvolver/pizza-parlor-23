@@ -11,25 +11,31 @@ function Pizza(size){
 
 // toppings = ["mushrooms", "anchovies", "pineapple"];
   // size = ["small", "medium", "large"];
+
+  Pizza.prototype.details = (e) => {
+    e.preventDefault();
+    const form = document.querySelector("form");
+    const log = document.querySelector("#log");
+  
+    const data = new FormData(form);
+    console.log("e.target.form", e.target.form);
+    let output = "";
+    for (const entry of data) {
+      output = `Your order detail: ${output}${entry[0]} = ${entry[1]}`
+      console.log("Output: ", output);  
+      e.preventDefault();
+    }
+    log.innerText = output;
+  }
+  
 function handleFormSubmission(e){
 
-  const form = document.querySelector("form");
-  const log = document.querySelector("#log");
-  const data = new FormData(form);
-  console.log("e.target.form", e.target.form);
-  let output = "";
-  for (const entry of data) {
-    output = `Your order detail: ${output}${entry[0]} = ${entry[1]}`
-    console.log("Output: ", output);  
-    e.preventDefault();
-  }
-  log.innerText = output;
-
+  let myPizza = new Pizza();
+  myPizza.details(e);
   // const toppings = document.querySelector("input[checked:"toppings"]]value")
-
+  e.preventDefault();
 }
 
 window.addEventListener("load", function(){ // #pizza-form
-  document.querySelector("form").addEventListener("submit", handleFormSubmission);
-  
+  document.querySelector("form").addEventListener("submit", handleFormSubmission);  
 });
