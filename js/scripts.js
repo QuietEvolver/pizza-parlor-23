@@ -13,18 +13,22 @@ function Pizza(size){
   // size = ["small", "medium", "large"];
 function handleFormSubmission(e){
 
-  const log = document.querySelector("log");
-  const data = new FormData(form);
-  let output = "";
-  for (const entry of data) {
-    output = `${output}${entry[0]}=${entry[1]}`
-  }
-  log.inneText = output;
+  // const form = document.querySelector("form");
+  // const log = document.querySelector("log");
+  // const data = new FormData(form);
+  // console.log("e.target.form", e.target.form);
+  // let output = "";
+  // for (const entry of data) {
+  //   output = `${output}${entry[0]}=${entry[1]}`
+  //   console.log("Output: ", output);
+  // }
+  // log.innerText = output;
+
+  // const toppings = document.querySelector("input[checked:"toppings"]]value")
   e.preventDefault();
 }
 
 window.addEventListener("load", function(){ // #pizza-form
-let form =  document.querySelector("form")
-form.addEventListener("submit", handleFormSubmission);
+  document.querySelector("form").addEventListener("submit", handleFormSubmission);
   
 });
