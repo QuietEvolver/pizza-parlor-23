@@ -19,7 +19,7 @@ function handleFormSubmission(e){
   console.log("e.target.form", e.target.form);
   let output = "";
   for (const entry of data) {
-    output = `${output}${entry[0]}=${entry[1]}`
+    output = `Your order detail: ${output}${entry[0]} = ${entry[1]}`
     console.log("Output: ", output);  
     e.preventDefault();
   }
