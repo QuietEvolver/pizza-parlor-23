@@ -11,9 +11,9 @@ function Pizza(){
 } 
 
 // Create a prototype method for the cost of a pizza 
-// Pizza.prototype.cost = () => {
+Pizza.prototype.cost = () => {
 
-// }
+}
 
 // Pizza.prototype.details = (e) => {
 //   e.preventDefault();
