@@ -20,7 +20,7 @@ Pizza.prototype.toppingsCost = function() {
 
 Pizza.prototype.sizeCost = function() {
   let size = this.size; 
-  let msg = "Choose an option";
+  // let msg = "Choose an option";
   switch(size){
     case("small"): 
       console.log("Small");
@@ -33,12 +33,17 @@ Pizza.prototype.sizeCost = function() {
       return 15;
     default: 
     console.log("Choose a sz");
-    output.innerHTML = msg;  // webAPI: MessageChannel; 
+    // output.innerHTML = msg;  // webAPI: MessageChannel; 
   }
 }
 
-Pizza.prototype.fullOrderCost() = function(){
-  this.price = Pizza.prototype.cost() + Pizza.prototype.sizeCost();
+Pizza.prototype.fullOrderCost = function(){
+  // Pizza.prototype.cost() + Pizza.prototype.sizeCost();
+  let toppings = this.toppings.length;
+  let size =  Pizza.prototype.sizeCost(this.size);
+  console.log("Toppings/Cost: ", toppings, size);
+  // this.price = this.toppings + this.size; // 'anchovies,pineapplemedium'
+  this.price = toppings + size;
   return this.price;
 }
 
