@@ -1,6 +1,6 @@
 /*
 Create a pizza object constructor with properties for toppings and size.
-Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
+ on the selections chosen. Use your own formula for this.
 */
 
 function Pizza(size){
@@ -16,15 +16,25 @@ Pizza.prototype.details = (e) => {
   const data = new FormData(form);
   let output = "";
   for (const entry of data) { // 
-    output = `${output} ${entry[0]} = ${entry[1]}\n`
+
+    if(entry[0] === "toppings"){
+      output = `Topping: ${output} ${entry[0]} = ${entry[1]}\n`;
+    } else if(entry[0] === "size"){
+      output = `Size: ${output} ${entry[0]} = ${entry[1]}\n`;
+    }
+    output = `${output} ${entry[0]} = ${entry[1]}\n`;
+
     console.log("Output: ", output);  
     console.log("Entry: ", entry); 
-     
     e.preventDefault();
   }
   log.innerText = output;
   // setTimeout(output, 3000);
-  // console.log("output: ", output);
+  // console.log("output: ", output);    
+  // setTimeout(() => {
+  //   output
+  //   }, 500);
+
 
 }
 
@@ -33,9 +43,13 @@ const myPizza = new Pizza(); // mock db
 function handleFormSubmission(e){
 
   myPizza.details(e);
+
   console.log("myPizza: ", myPizza);
+
   e.preventDefault();
 }
+
+// Create a prototype method for the cost of a pizza depending
 
 window.addEventListener("load", function(){ 
   document.querySelector("form").addEventListener("submit", handleFormSubmission);  
