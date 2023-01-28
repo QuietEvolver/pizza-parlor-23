@@ -19,6 +19,7 @@ Pizza.prototype.details = (e) => {
 
     if(entry[0] === "toppings"){
       output = `Topping: ${output} ${entry[0]} = ${entry[1]}\n`;
+      for( let entry of data){}
     } else if(entry[0] === "size"){
       output = `Size: ${output} ${entry[0]} = ${entry[1]}\n`;
     }
