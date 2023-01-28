@@ -11,12 +11,12 @@ function Pizza(){
 } 
 
 // WKG: Create a prototype method for the cost of a pizza 
-// Pizza.prototype.cost = function() {
-//   let price = this.price; 
-//   let toppings = this.toppings;
-//   price = (toppings.length) * 3;
-//   return price;
-// }
+Pizza.prototype.toppingsCost = function() {
+  let price = this.price; 
+  let toppings = this.toppings;
+  price = (toppings.length) * 3;
+  return price;
+}
 
 Pizza.prototype.sizeCost = function() {
   let size = this.size; 
