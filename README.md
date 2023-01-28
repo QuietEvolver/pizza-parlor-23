@@ -42,6 +42,17 @@ myPizza.size = "medium";
 myPizza.price = 6
 Expected Output: Pizza {toppings: Array(2), size: 'medium', price: 6}
 
+<!-- new function -->
+
+Describe: Pizza.prototype.sizeCost
+
+Test: "It should return a Pizza order size at $10 for a medium selection(s)."
+Code: 
+const myPizza = new Pizza();
+myPizza.size = "medium";
+myPizza.price = 10
+Expected Output: Pizza {toppings: Array(0), size: 'medium', price: 6}
+
 <!-- new function 
 
 Describe: Pizza.prototype.details
