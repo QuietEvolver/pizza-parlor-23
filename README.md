@@ -26,8 +26,8 @@ Describe: Pizza()
 Test: "It should return a Pizza object with two properties for toppings and size"
 Code: 
 const myPizza = new Pizza();
-mypizza.toppings = ["anchovies", "pineapple"];
-mypizza.size = "medium";
+myPizza.toppings = ["anchovies", "pineapple"];
+myPizza.size = "medium";
 Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium", price: 0}
 
 <!-- new function -->

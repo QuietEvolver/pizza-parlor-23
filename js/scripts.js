@@ -11,8 +11,11 @@ function Pizza(){
 } 
 
 // Create a prototype method for the cost of a pizza 
-Pizza.prototype.cost = () => {
-
+Pizza.prototype.cost = function() {
+  let price = this.price; 
+  let toppings = this.toppings;
+  price = (toppings.length) * 3;
+  return price;
 }
 
 // Pizza.prototype.details = (e) => {
