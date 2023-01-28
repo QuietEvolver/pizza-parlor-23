@@ -18,13 +18,9 @@ function Pizza(){
 //   return price;
 // }
 
-Pizza.prototype.cost = function() {
-  let price = this.price; 
-  let toppings = this.toppings;
+Pizza.prototype.sizeCost = function() {
   let size = this.size; 
-  // if( size = "small"){
-  //   return 5;
-  // }
+  let msg = "Choose an option";
   switch(size){
     case("small"): 
       console.log("Small");
@@ -37,10 +33,8 @@ Pizza.prototype.cost = function() {
       return 15;
     default: 
     console.log("Choose a sz");
+    output.innerHTML = msg;  // webAPI: MessageChannel; 
   }
-
-  price = ((toppings.length) * 3) + size;
-  return price;
 }
 
 // Pizza.prototype.details = (e) => {
