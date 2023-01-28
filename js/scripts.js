@@ -9,6 +9,10 @@ function Pizza(size){
   this.size = size;
 } 
 
+// Pizza.prototype.cost = () => {
+
+// }
+
 Pizza.prototype.details = (e) => {
   e.preventDefault();
   const form = document.querySelector("form");
@@ -19,9 +23,16 @@ Pizza.prototype.details = (e) => {
   for (const entry of data) { // 
 
     if(entry[0] === "toppings"){
-      let toppingsPrice = (entry.length - 1) * 3;
-      output = `Topping: ${toppingsPrice}\n`;
-      // for( let entry of data){
+      for( let entry of data){
+        let toppingsPrice = (entry.length - 1) * 2;
+        // FIGURE OUT HOW TO CATCH EA ENTRY LOOP TO MULT
+        output = `Topping: ${toppingsPrice}\n`;
+        console.log("topping PRICE", toppingsPrice); 
+        console.log("entry ", entry); 
+
+
+      }
+      // 
       //     entry = this.toppings;
       //     console.log("entry toppings?", entry);
       // }
