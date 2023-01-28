@@ -3,16 +3,17 @@
 - Create a pizza object constructor with properties for toppings and size.
 - Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
 */
-
-function Pizza(size){
+// let myPizza = new Pizza();
+function Pizza(){
   this.toppings = [];
-  this.size = size;
+  this.size = "";
+  this.price = 0;
 } 
 
 // Create a prototype method for the cost of a pizza 
-Pizza.prototype.cost = () => {
+// Pizza.prototype.cost = () => {
 
-}
+// }
 
 // Pizza.prototype.details = (e) => {
 //   e.preventDefault();
