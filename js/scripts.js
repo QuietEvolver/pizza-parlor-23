@@ -38,9 +38,8 @@ Pizza.prototype.sizeCost = function() {
 }
 
 Pizza.prototype.fullOrderCost() = function(){
-  let price = this.price;
-  price = Pizza.prototype.cost() + Pizza.prototype.sizeCost();
-  return price;
+  this.price = Pizza.prototype.cost() + Pizza.prototype.sizeCost();
+  return this.price;
 }
 
 // Pizza.prototype.details = (e) => {
