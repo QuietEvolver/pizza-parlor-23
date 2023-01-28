@@ -37,6 +37,12 @@ Pizza.prototype.sizeCost = function() {
   }
 }
 
+Pizza.prototype.fullOrderCost() = function(){
+  let price = this.price;
+  price = Pizza.prototype.cost() + Pizza.prototype.sizeCost();
+  return price;
+}
+
 // Pizza.prototype.details = (e) => {
 //   e.preventDefault();
 //   const form = document.querySelector("form");
