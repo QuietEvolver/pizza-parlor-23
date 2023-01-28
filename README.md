@@ -53,6 +53,17 @@ myPizza.size = "medium";
 myPizza.price = 10
 Expected Output: Pizza {toppings: Array(0), size: 'medium', price: 10}
 
+<!-- new function -->
+
+Describe: Pizza.prototype.fullOrderCost()
+
+Test: "It should return a Pizza object with two properties for toppings and size"
+Code: 
+const myPizza = new Pizza();
+myPizza.toppings = ["anchovies", "pineapple"];
+myPizza.size = "medium";
+Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium", price: 16}
+
 <!-- new function 
 
 Describe: Pizza.prototype.details
