@@ -10,11 +10,36 @@ function Pizza(){
   this.price = 0;
 } 
 
-// Create a prototype method for the cost of a pizza 
+// WKG: Create a prototype method for the cost of a pizza 
+// Pizza.prototype.cost = function() {
+//   let price = this.price; 
+//   let toppings = this.toppings;
+//   price = (toppings.length) * 3;
+//   return price;
+// }
+
 Pizza.prototype.cost = function() {
   let price = this.price; 
   let toppings = this.toppings;
-  price = (toppings.length) * 3;
+  let size = this.size; 
+  // if( size = "small"){
+  //   return 5;
+  // }
+  switch(size){
+    case("small"): 
+      console.log("Small");
+      return 5;
+    case("medium"): 
+      console.log("med");
+      return 10;
+    case("large"):
+      console.log("lg");
+      return 15;
+    default: 
+    console.log("Choose a sz");
+  }
+
+  price = ((toppings.length) * 3) + size;
   return price;
 }
 
