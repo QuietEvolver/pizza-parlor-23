@@ -19,7 +19,7 @@ Create a website for a pizza company where a user can choose one or more individ
 * Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
 
 ## Tests
-```
+
 <!-- first function -->
 Describe: Pizza()
 
@@ -35,12 +35,16 @@ Test: "It should return toppings and size form selection(s)."
 Code: const myPizza = new Pizza(toppings: ["pinneapple"], size: "medium" )
 Expected Output: Pizza { toppings: ["pinneapple"], size: "medium" }
 
-Describe: Pizza.prototype.details
-
 Test: "It should return a Pizza order toppings and size form selection(s)."
 Code: const myPizza = new Pizza(toppings: ["pinneapple"], size: "medium" )
 Expected Output: Pizza { toppings: ["pinneapple"], size: "medium" }
-```
+
+Test: "It should return a Pizza order toppings at $3 ea selection(s)."
+Code: const myPizza = new Pizza(toppings: ["pinneapple"], size: "medium" )
+Expected Output: Toppings: $3
+
+<!-- Describe: Pizza.prototype.details -->
+
 
 ## Setup/Installation Requirements
 

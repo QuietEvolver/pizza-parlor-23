@@ -1,6 +1,7 @@
 /*
-Create a pizza object constructor with properties for toppings and size.
- on the selections chosen. Use your own formula for this.
+- Allow the user to choose toppings and size for the pizza they'd like to order.
+- Create a pizza object constructor with properties for toppings and size.
+- Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
 */
 
 function Pizza(size){
@@ -18,8 +19,12 @@ Pizza.prototype.details = (e) => {
   for (const entry of data) { // 
 
     if(entry[0] === "toppings"){
-      output = `Topping: ${output} ${entry[0]} = ${entry[1]}\n`;
-      for( let entry of data){}
+      let toppingsPrice = (entry.length - 1) * 3;
+      output = `Topping: ${toppingsPrice}\n`;
+      // for( let entry of data){
+      //     entry = this.toppings;
+      //     console.log("entry toppings?", entry);
+      // }
     } else if(entry[0] === "size"){
       output = `Size: ${output} ${entry[0]} = ${entry[1]}\n`;
     }
