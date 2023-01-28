@@ -32,7 +32,7 @@ Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium", p
 
 <!-- new function -->
 
-Describe: Pizza.prototype.cost
+Describe: Pizza.prototype.toppingsCost
 
 Test: "It should return a Pizza order toppings at $3 ea selection(s)."
 Code: 
@@ -51,7 +51,7 @@ Code:
 const myPizza = new Pizza();
 myPizza.size = "medium";
 myPizza.price = 10
-Expected Output: Pizza {toppings: Array(0), size: 'medium', price: 6}
+Expected Output: Pizza {toppings: Array(0), size: 'medium', price: 10}
 
 <!-- new function 
 
