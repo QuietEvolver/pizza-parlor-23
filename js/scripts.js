@@ -24,12 +24,11 @@ Pizza.prototype.details = (e) => {
 
     if(entry[0] === "toppings"){
       for( let entry of data){
-        let toppingsPrice = (entry.length - 1) * 2;
+        let toppingsPrice = data.forEach(function(entry,data){let price = entry *2;console.log("PRICE", price); return price; }); //* 2
         // FIGURE OUT HOW TO CATCH EA ENTRY LOOP TO MULT
-        output = `Topping: ${toppingsPrice}\n`;
-        console.log("topping PRICE", toppingsPrice); 
-        console.log("entry ", entry); 
-
+        output = `Size: ${output} ${entry[0]} = ${entry[1]}`
+        console.log("ENTRY ", entry); 
+       
 
       }
       // 
@@ -37,7 +36,10 @@ Pizza.prototype.details = (e) => {
       //     console.log("entry toppings?", entry);
       // }
     } else if(entry[0] === "size"){
-      output = `Size: ${output} ${entry[0]} = ${entry[1]}\n`;
+      output = `Size: ${output} ${entry[0]} = ${entry[1]}\n`; 
+      data.forEach(function (value, i) {
+          console.log('VERA %d: %s', i, value);
+      });
     }
     output = `${output} ${entry[0]} = ${entry[1]}\n`;
 
