@@ -21,30 +21,25 @@ Pizza.prototype.details = (e) => {
   const data = new FormData(form);
   let output = "";
   for (const entry of data) { // 
+    //     // FIGURE OUT HOW TO CATCH EA ENTRY LOOP TO MULT
+    // if(entry[0] === "toppings"){
+    //   for( let entry of data){
 
-    if(entry[0] === "toppings"){
-      for( let entry of data){
-        let toppingsPrice = data.forEach(function(entry,data){let price = entry *2;console.log("PRICE", price); return price; }); //* 2
-        // FIGURE OUT HOW TO CATCH EA ENTRY LOOP TO MULT
-        output = `Size: ${output} ${entry[0]} = ${entry[1]}`
-        console.log("ENTRY ", entry); 
-       
-
-      }
-      // 
-      //     entry = this.toppings;
-      //     console.log("entry toppings?", entry);
-      // }
-    } else if(entry[0] === "size"){
-      output = `Size: ${output} ${entry[0]} = ${entry[1]}\n`; 
-      data.forEach(function (value, i) {
-          console.log('VERA %d: %s', i, value);
-      });
-    }
+    //     output = `Size: ${output} ${entry[0]} = ${entry[1]}`
+    //   // 
+    //     // entry[1] = this.toppings;
+    //     // console.log("entry toppings?", entry[1]);
+    //   }
+    // } else if(entry[0] === "size"){
+    //   output = `Size: ${output} ${entry[0]} = ${entry[1]}\n`; 
+    //   // data.forEach(function (value, i) {
+    //   //     console.log('VERA %d: %s', i, value);
+    //   // });
+    // }
     output = `${output} ${entry[0]} = ${entry[1]}\n`;
 
-    console.log("Output: ", output);  
-    console.log("Entry: ", entry); 
+    // console.log("Output: ", output);  
+    // console.log("Entry: ", entry); 
     e.preventDefault();
   }
   log.innerText = output;
