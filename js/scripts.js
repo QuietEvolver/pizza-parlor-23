@@ -3,7 +3,11 @@
 - Create a pizza object constructor with properties for toppings and size.
 - Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
 */
-// let myPizza = new Pizza();
+
+/*let myPizza = new Pizza();
+let myPizza = new Pizza();
+myPizza.toppings = ["anchovies", "pineapple"];
+myPizza.size = "medium"; */
 function Pizza(){
   this.toppings = [];
   this.size = "";
@@ -12,45 +16,51 @@ function Pizza(){
 
 // WKG: Create a prototype method for the cost of a pizza 
 Pizza.prototype.toppingsCost = function() {
-  // let price = this.price; 
   // let toppings = this.toppings;
-  // price = (toppings.length) * 3;
-  // return price;
 
-    // Set empty array for toppings // 
-    let toppingArr = [];  // this.t
+  // Set empty array for toppings // 
+  let toppingArr = []; 
 
-    // Add each topping to array
-    for (const [key, value] of data) {
-      if (key === "toppings") {
-        toppingArr.push(value);
-      }
+  // Add each topping to array
+  for (const [key, value] of data) {
+    if (key === "toppings") {
+      toppingArr.push(value);
     }
-  ///
+  }
 }
 
 Pizza.prototype.sizeCost = function() {
-  let size = this.size; 
-  // let msg = "Choose an option";
-  // switch(size){
-  //   case("small"): 
-  //     console.log("Small");
-  //     return 5;
-  //   case("medium"): 
-  //     console.log("med");
-  //     return 10;
-  //   case("large"):
-  //     console.log("lg");
-  //     return 15;
-  //   default: 
-  //   console.log("Choose a sz");
-    // output.innerHTML = msg;  // webAPI: MessageChannel; 
-  // }
+  // Add each size
+  let value = this.size; 
+  for (const [key, value] of data) {
+    if (key === "size") {
+      size = value;
+    }
+    // let msg = "Choose an option";
+    switch(size){
+      case("small"): 
+        this.size = "small";
+        sizePrice = 5;
+        return sizePrice;
+      case("medium"): 
+        this.size = "medium";
+        sizePrice = 10;
+        return sizePrice;
+      case("large"):
+        this.size = "large";
+        sizePrice = 15;
+        return sizePrice;
+      default: 
+      console.log("Choose a sz");
+      // output.innerHTML = msg;  // webAPI: MessageChannel; 
+    }
+  }
+// }
+
     /**/  
    ////////////////////////////// 
-  let sizePrice = null;
+  /* let sizePrice = null;
   // let size = null;
-  size = null;
 
   // Add each topping to array
   for (const [key, value] of data) {
@@ -70,7 +80,7 @@ Pizza.prototype.sizeCost = function() {
       
     } 
     return sizePrice;
-  }
+  }*/
 }
 
 Pizza.prototype.fullOrderCost = function(){
@@ -84,7 +94,10 @@ Pizza.prototype.fullOrderCost = function(){
 ////////////////////////////////
   // Calculate price of pizza
   // const toppingPrice = toppingArr.length * 3;
+
+  let sizePrice = myPizza.sizeCost();
   const toppingPrice = this.toppings.length * 3;
+  console.log("this.toppings - toppingsPrice ", toppingPrice);
   const totalPrice = toppingPrice + sizePrice;
   console.log('totalPrice', totalPrice);
 
