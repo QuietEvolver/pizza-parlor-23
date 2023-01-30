@@ -20,7 +20,8 @@ Create a website for a pizza company where a user can choose one or more individ
 
 ## Tests
 
-<!-- first function -->
+```
+
 Describe: Pizza()
 
 Test: "It should return a Pizza object with two properties for toppings and size"
@@ -30,7 +31,6 @@ myPizza.toppings = ["anchovies", "pineapple"];
 myPizza.size = "medium";
 Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium", price: 0}
 
-<!-- new function -->
 
 Describe: Pizza.prototype.toppingsCost
 
@@ -42,7 +42,6 @@ myPizza.size = "medium";
 myPizza.price = 6
 Expected Output: Pizza {toppings: Array(2), size: 'medium', price: 6}
 
-<!-- new function -->
 
 Describe: Pizza.prototype.sizeCost
 
@@ -52,8 +51,7 @@ const myPizza = new Pizza();
 myPizza.size = "medium";
 myPizza.price = 10
 Expected Output: Pizza {toppings: Array(0), size: 'medium', price: 10}
-
-<!-- new function -->
+ 
 
 Describe: Pizza.prototype.fullOrderCost()
 
@@ -63,22 +61,7 @@ const myPizza = new Pizza();
 myPizza.toppings = ["anchovies", "pineapple"];
 myPizza.size = "medium";
 Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium", price: 16}
-
-<!-- new function 
-
-Describe: Pizza.prototype.details
-
-Test: "It should return toppings and size form selection(s)."
-Code: const myPizza = new Pizza();
-myPizza.toppings = ["anchovies", "pineapple"];
-myPizza.size = "medium";
-Expected Output: Pizza { toppings: ["pinneapple"], size: "medium" }
-
-Test: "It should return a Pizza order toppings and size form selection(s)."
-Code: const myPizza = new Pizza();
-myPizza.toppings = ["anchovies", "pineapple"];
-myPizza.size = "medium";
-Expected Output: Pizza { toppings: ["pinneapple"], size: "medium" } -->
+```
 
 ## Setup/Installation Requirements
 
