@@ -47,7 +47,7 @@ Pizza.prototype.details = (e) => {
   e.preventDefault();
   const form = document.querySelector("form");
   const log = document.querySelector("#log");
-
+ // TODO: ASK Calvin: How do i FormData.set() for my Object.entries()..?
   const data = new FormData(form);
   console.log('data', data);
   let output = "";
@@ -57,6 +57,11 @@ Pizza.prototype.details = (e) => {
   }
   log.innerText = output;
 
+  // checkbox Selection
+  //const toppings = document.querySelector("input[name='toppings']:checked").value;
+  let toppingsArr = this.toppings;
+  toppingsArr.push(toppings);
+  console.log("toppingsArr: ", this.toppings);
   /////////toppings///////////
   // Set empty array for toppings 
   // let toppingArr = []; 
@@ -67,7 +72,10 @@ Pizza.prototype.details = (e) => {
   //     toppingArr.push(value);
   //   }
   // }
-  //////////////////// 
+  //////////////////// radioSelection
+  const size = document.querySelector("input[name='size']:checked").value;
+  size = this.size;
+  console.log("size: ", size);
   myPizza.toppingsCost(e);
   console.log("myPizza.toppingsCost(e)", myPizza.toppingsCost(e));
   console.log("my.topping ", myPizza.toppings);
