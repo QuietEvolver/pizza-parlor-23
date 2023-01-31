@@ -37,6 +37,7 @@ Pizza.prototype.fullOrderCost = function(){
   console.log("this.toppings - toppingsPrice ", toppingPrice);
   console.log("this.sizePrice ", sizePrice);
   const totalPrice = toppingPrice + sizePrice;
+  // totalPrice = this.price;
   console.log('totalPrice', totalPrice);
   return totalPrice;
 }
@@ -60,7 +61,7 @@ Pizza.prototype.details = (e) => {
   // checkbox Selection
   //const toppings = document.querySelector("input[name='toppings']:checked").value;
   let toppingsArr = this.toppings;
-  toppingsArr.push(toppings);
+  // toppingsArr.push(toppings);
   console.log("toppingsArr: ", this.toppings);
   /////////toppings///////////
   // Set empty array for toppings 
@@ -72,16 +73,18 @@ Pizza.prototype.details = (e) => {
   //     toppingArr.push(value);
   //   }
   // }
-  //////////////////// radioSelection
+  //////////////////// radioSelection capture(d)
   const size = document.querySelector("input[name='size']:checked").value;
-  size = this.size;
-  console.log("size: ", size);
+  myPizza.size = size;
+  console.log("myPizza.size: ", size); 
+  myPizza.sizeCost(e);
   myPizza.toppingsCost(e);
   console.log("myPizza.toppingsCost(e)", myPizza.toppingsCost(e));
   console.log("my.topping ", myPizza.toppings);
   console.log("my.size ", myPizza.sizes);
   myPizza.fullOrderCost(e);
   console.log("myPizza.fullOrderCost(e)", myPizza.fullOrderCost(e));
+  console.log("this.pricr", this.price);
 }
 
 const myPizza = new Pizza(); // mock db
