@@ -36,31 +36,31 @@ Describe: Pizza.prototype.toppingsCost
 
 Test: "It should return a Pizza order toppings at $3 ea selection(s)."
 Code: 
-const myPizza = new Pizza();
 myPizza.toppings = ["anchovies", "pineapple"];
 myPizza.size = "medium";
 myPizza.price = 6
-Expected Output: Pizza {toppings: Array(2), size: 'medium', price: 6}
+myPizza.toppingsCost()
+Expected Output: 6
 
 
 Describe: Pizza.prototype.sizeCost
 
 Test: "It should return a Pizza order size at $10 for a medium selection(s)."
 Code: 
-const myPizza = new Pizza();
 myPizza.size = "medium";
 myPizza.price = 10
-Expected Output: Pizza {toppings: Array(0), size: 'medium', price: 10}
+myPizza.sizeCost()
+Expected Output: 10
  
 
 Describe: Pizza.prototype.fullOrderCost()
 
 Test: "It should return a Pizza object with two properties for toppings and size"
 Code: 
-const myPizza = new Pizza();
 myPizza.toppings = ["anchovies", "pineapple"];
 myPizza.size = "medium";
-Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium", price: 16}
+myPizza.fullOrderCost();
+Expected Output: 16
 ```
 
 ## Setup/Installation Requirements
