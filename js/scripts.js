@@ -36,10 +36,8 @@ Pizza.prototype.fullOrderCost = function(){
   const toppingPrice = this.toppingsCost();
   console.log("this.toppings - toppingsPrice ", toppingPrice);
   console.log("this.sizePrice ", sizePrice);
-  const totalPrice = toppingPrice + sizePrice;
-  // totalPrice = this.price;
-  console.log('totalPrice', totalPrice);
-  return totalPrice;
+  this.price = toppingPrice + sizePrice;
+  return this.price;
 }
 
 
