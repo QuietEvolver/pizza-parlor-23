@@ -11,7 +11,7 @@ Pizza.prototype.toppingsCost = function() {
 
 Pizza.prototype.sizeCost = function() {
   let size = this.size;
-  if(Object.keys(size)){
+  // if(Object.keys(size)){
     switch(size){
       case("small"): 
         this.size = "small";
@@ -26,7 +26,7 @@ Pizza.prototype.sizeCost = function() {
         sizePrice = 15;
         return sizePrice;
       default: 
-    }
+    // }
   }
 }
 
@@ -40,6 +40,7 @@ Pizza.prototype.fullOrderCost = function(){
   return this.price;
 }
 
+const myPizza = new Pizza(); // mock db
 
 // Utility
 Pizza.prototype.details = (e) => {
@@ -58,9 +59,22 @@ Pizza.prototype.details = (e) => {
 
   // checkbox Selection
   //const toppings = document.querySelector("input[name='toppings']:checked").value;
-  let toppingsArr = this.toppings;
-  // toppingsArr.push(toppings);
-  console.log("toppingsArr: ", this.toppings);
+  this.toppings = [];
+  if(document.getElementById("mushrooms").checked===true){
+    toppings.push("mushrooms");
+  } 
+  if(document.getElementById("anchovies").checked===true){
+    toppings.push("anchovies");
+  } 
+  if(document.getElementById("pineapple").checked===true){
+    toppings.push("pineapple");
+  } 
+  // toppingsArr.push(toppings); this.toppings,
+  myPizza.toppings = this.toppings;
+  console.log("this.toppings: ", myPizza.toppings);
+  myPizza.toppingsCost(e);
+  console.log("myPizza.toppingsCost(e)", myPizza.toppingsCost(e));
+  console.log("my.topping ", myPizza.toppings);
   /////////toppings///////////
   // Set empty array for toppings 
   // let toppingArr = []; 
@@ -76,16 +90,13 @@ Pizza.prototype.details = (e) => {
   myPizza.size = size;
   console.log("myPizza.size: ", size); 
   myPizza.sizeCost(e);
-  myPizza.toppingsCost(e);
-  console.log("myPizza.toppingsCost(e)", myPizza.toppingsCost(e));
-  console.log("my.topping ", myPizza.toppings);
   console.log("my.size ", myPizza.sizes);
+   // cost
   myPizza.fullOrderCost(e);
   console.log("myPizza.fullOrderCost(e)", myPizza.fullOrderCost(e));
-  console.log("this.pricr", this.price);
+  console.log("this.price", this.price);
 }
 
-const myPizza = new Pizza(); // mock db
   
 function handleFormSubmission(e){
   e.preventDefault();
