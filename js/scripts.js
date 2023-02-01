@@ -81,13 +81,10 @@ Pizza.prototype.details = (e) => {
   // document.getElementById("display").innerHTML = orderCost;
 
   let p = document.createElement("p");
-  
   p.style.display = "block";
-  let display = `Your order amount is $${orderCost}.00`
-  p.append(display);
+  let display = `Your selections are:\n ${output} Total cost is $${orderCost}.00`
+  p.append(display, output);
   document.querySelector("p").innerText = display;
-
-  p.innerText = `Your order is ${orderCost} and your selections are ${output}`;
 }
 
   
