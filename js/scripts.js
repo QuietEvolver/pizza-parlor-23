@@ -86,8 +86,10 @@ Pizza.prototype.details = (e) => {
 
   const data = new FormData(form);
   let output = "";
-  for (const entry of data) {
+  for (const entry of data.entries()) {  
+    // output = `${output} ${entry[0]} = ${entry[1]}\n`;
     output = `${output} ${entry[0]} = ${entry[1]}\n`;
+    console.log("entry(ies) ", output);
     e.preventDefault();
   }
   log.innerText = output;
