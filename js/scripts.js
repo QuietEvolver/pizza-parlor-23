@@ -72,13 +72,9 @@ Pizza.prototype.details = (e) => {
   const size = document.querySelector("input[name='size']:checked").value;
   myPizza.size = size; 
   myPizza.sizeCost(e);
-  // console.log("my.size ", myPizza.size);
-   // cost
   myPizza.fullOrderCost(e);
-  console.log("myPizza.fullOrderCost(e)", myPizza.fullOrderCost());
-  // console.log("this.price", myPizza.price);
+  
   const orderCost = myPizza.fullOrderCost();
-  // document.getElementById("display").innerHTML = orderCost;
 
   let p = document.createElement("p");
   p.style.display = "block";
@@ -86,7 +82,6 @@ Pizza.prototype.details = (e) => {
   p.append(display, output);
   document.querySelector("p").innerText = display;
 }
-
   
 function handleFormSubmission(e){
   e.preventDefault();
