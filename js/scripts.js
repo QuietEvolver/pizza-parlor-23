@@ -26,6 +26,7 @@ Pizza.prototype.sizeCost = function() {
         return sizePrice;
       default: 
         // return MessageChannel;
+        break;
   }
 }
 
@@ -46,7 +47,7 @@ Pizza.prototype.details = (e) => {
   const log = document.querySelector("#log");
  // TODO: ASK Calvin: How do i FormData.set() for my Object.entries()..?
   const data = new FormData(form);
-  console.log('data', data);
+  // console.log('data', data);
   let output = "";
   for (const entry of data) {
     output = `${output} ${entry[0]} = ${entry[1]}\n`;
@@ -71,11 +72,17 @@ Pizza.prototype.details = (e) => {
   const size = document.querySelector("input[name='size']:checked").value;
   myPizza.size = size; 
   myPizza.sizeCost(e);
-  console.log("my.size ", myPizza.size);
+  // console.log("my.size ", myPizza.size);
    // cost
   myPizza.fullOrderCost(e);
-  console.log("myPizza.fullOrderCost(e)", myPizza.fullOrderCost(e));
-  console.log("this.price", myPizza.price);
+  console.log("myPizza.fullOrderCost(e)", myPizza.fullOrderCost());
+  // console.log("this.price", myPizza.price);
+  const orderCost = myPizza.fullOrderCost();
+  document.getElementById("displa").innerHTML = orderCost;
+  document.querySelector("log").innerText = `Your order amount is $${orderCost}.00`;
+
+
+  document.querySelector('p').innerText = `Your order is ${orderCost}`;
 }
 
   
