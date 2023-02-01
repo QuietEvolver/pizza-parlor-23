@@ -2,6 +2,11 @@ html {
   font-family: sans-serif;
 }
 
+body {
+background: url("https://imgs.search.brave.com/F8t4WAfG4otVjM1BebLRXdXGHp-M2-ZYS69rFEMmfpc/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5S/bjNtSUlhMlZCNGg3/OXRPa1Ztd0d3SGFI/YSZwaWQ9QXBp");
+background-size: cover;
+}
+
 form {
   width: 600px;
   margin: 0 auto;
@@ -20,4 +25,11 @@ legend {
   padding: 10px;
   background: blue;
   color: cyan;
+}
+
+#display {
+  color: rgb(139, 36, 235);
+  font: 1.75em sans-serif;
+  font-size: large;
+  font-weight: 1000;
 }
