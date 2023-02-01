@@ -25,7 +25,7 @@ Pizza.prototype.sizeCost = function() {
         sizePrice = 15;
         return sizePrice;
       default: 
-        // return MessageChannel;
+        // return MessageChannel; ASK CALVIN
         break;
   }
 }
@@ -77,7 +77,7 @@ Pizza.prototype.details = (e) => {
   const orderCost = myPizza.fullOrderCost();
 
   let p = document.createElement("p");
-  p.style.display = "block";
+  p.style.display = "block center";
   let display = `Your selections are:\n ${output} Total cost is $${orderCost}.00`
   p.append(display, output);
   document.querySelector("p").innerText = display;
