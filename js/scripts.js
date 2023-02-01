@@ -79,10 +79,13 @@ Pizza.prototype.details = (e) => {
   // console.log("this.price", myPizza.price);
   const orderCost = myPizza.fullOrderCost();
   document.getElementById("displa").innerHTML = orderCost;
-  document.querySelector("log").innerText = `Your order amount is $${orderCost}.00`;
+
+  let p = document.createElement("p");
+  p.style.display = "block";
+  document.querySelector("p").innerText = `Your order amount is $${orderCost}.00`;
 
 
-  document.querySelector('p').innerText = `Your order is ${orderCost}`;
+  p.innerText = `Your order is ${orderCost}`;
 }
 
   
