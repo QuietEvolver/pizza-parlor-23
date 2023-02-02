@@ -79,16 +79,25 @@ Pizza.prototype.fullOrderCost = function(){
 }
 
 // Utility
-Pizza.prototype.details = (e) => {
+Pizza.prototype.details = function(e) {
   e.preventDefault();
   const form = document.querySelector("form");
   const log = document.querySelector("#log");
 
   const data = new FormData(form);
+
+  // console.log("This.", this);
   let output = "";
   for (const entry of data.entries()) {  
     // output = `${output} ${entry[0]} = ${entry[1]}\n`;
     output = `${output} ${entry[0]} = ${entry[1]}\n`;
+    if(entry[0]==="toppings"){
+      // console.log("This.", this);
+      this.toppings.push(entry[1]);
+    }
+    if(entry[0]==="size"){
+      this.size = (entry[1]);
+    }
     console.log("entry(ies) ", output);
     e.preventDefault();
   }
